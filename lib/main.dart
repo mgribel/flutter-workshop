@@ -37,6 +37,7 @@ class _CoffeeCounterWidgetState extends State<CoffeeCounterWidget> {
           RaisedButton(
             onPressed: () {
               _counter += 1;
+              setState((){});
             },
             child: Text('I drank a cup of coffee'),
           ),
