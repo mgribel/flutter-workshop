@@ -13,7 +13,29 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: Center(
-            child: Text('Hello World')),
+            child: CoffeeCounterWidget()),
+      ),
+    );
+  }
+}
+
+class CoffeeCounterWidget extends StatelessWidget {
+  int _counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment:  MainAxisAlignment.center,
+        children: <Widget>[
+          Text('$_counter'),
+          RaisedButton(
+            onPressed: () {
+              _counter += 1;
+            },
+            child: Text('I drank a cup of coffee'),
+          ),
+        ],
       ),
     );
   }
