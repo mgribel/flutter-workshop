@@ -19,7 +19,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class CoffeeCounterWidget extends StatelessWidget {
+class CoffeeCounterWidget extends StatefulWidget {
+  @override
+  _CoffeeCounterWidgetState createState() => _CoffeeCounterWidgetState();
+}
+
+class _CoffeeCounterWidgetState extends State<CoffeeCounterWidget> {
   int _counter = 0;
 
   @override
